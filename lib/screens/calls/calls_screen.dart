@@ -1,38 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/core/constants/app_colors.dart';
 import 'package:whatsapp_clone/core/constants/popup_menus.dart';
 import 'package:whatsapp_clone/widgets/popup_menu/my_popup_menu.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class CallsScreen extends StatelessWidget {
+  const CallsScreen({super.key});
 
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
           title: const Text(
-            'MyWhatsApp',
-            style: TextStyle(
-              color: AppColors.geen,
-              fontWeight: FontWeight.w600,
-            ),
+            'Calls',
           ),
           actions: [
             IconButton(
               onPressed: () {},
               icon: const Icon(Icons.camera_alt_outlined),
             ),
-            const MyPopupMenu(menuList: homePopupMenus),
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.search),
+            ),
+            const MyPopupMenu(menuList: callsPopupMenus),
           ],
         ),
         body: const Center(
-          child: Text('Chats'),
+          child: Text('Calls'),
         ),
       ),
     );
